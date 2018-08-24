@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
 	path('',views.index,name='index'),
-	path('/a',views.index,name='index'),
-	#url('(?P<value>\d+)/$',views.article,name='article'),
-	path('/articleDetail',views.detail,name='detail')
+	path('a',views.index,name='index'),
+	path('articleDetail',views.detail,name='detail'),
+	path('<str:random_string>',views.dummy_view1),
 ]
